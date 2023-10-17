@@ -13,3 +13,171 @@
  *= require_tree .
  *= require_self
  */
+
+
+#header {
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+}
+#header img{
+    width: 70px;
+    height: 70px;
+}
+
+body{
+    background-color: white;
+}
+
+.sidebar {
+    width: 200px;
+    float: left;
+}
+
+.home1 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#home {
+    padding-left: 5px;
+}
+.wadai2 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#wadai {
+    padding-left: 5px;
+}
+.tsuchi3 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#tsuchi {
+    padding-left: 5px;
+}
+.message4 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#message {
+    padding-left: 5px;
+}
+.bookmark5 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#bookmark {
+    padding-left: 5px;
+}
+.list6 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#list {
+    padding-left: 5px;
+}
+.profile7 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#profile {
+    padding-left: 5px;
+}
+.more8 {
+    display:flex;
+    max-width: 200px;
+    height: 50px;
+    margin: 10px;
+}
+#more {
+    padding-left: 5px;
+}
+#content {
+width: 800px;
+border-left: 1px solid #cccccc;
+}
+
+.index_header {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    border-bottom: 1px solid #cccccc;
+}
+.index {
+    width: 800px;
+}
+.index_tweet {
+    margin: 10px;   
+}
+.index_acount{
+    display: flex;
+    align-items: center;
+}
+.index_acount img{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center;
+}
+#index_acount_name {
+    margin: 5px;
+}
+#index_acount_id {
+    color: grey; 
+}
+#index_tweet_date {
+    margin: 10px;
+    color: grey;
+}
+#index_padding {
+    padding-left: 40px;
+}
+
+
+.show_container {
+    width: 800px;
+}
+.acount {
+    display: flex; /*クラスの中の要素を横並び*/
+    align-items: center; /*クラスの要素の高さを中央で揃える*/
+    border-bottom: 1px solid #cccccc; /*要素の下に下線*/
+}
+
+.acount img {
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /*画像を丸く切り取る*/
+    background-position: center; /*画像の中心を表示*/
+}
+#acount_name {
+    margin: 5px;
+}
+#acount_id {
+    color: grey; 
+}
+#tweet_date {
+    margin: 10px;
+    color: grey;
+}
+
+.clearfix:after {
+content: "";
+clear: both;
+display: block;
+}

@@ -11,6 +11,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    　<!-- indexやeditなどのhtmlファイルが表示される -->
+    
+    <div id="container">
+      <div id="header">
+        <%= render "header" %>
+      </div>
+      <div id="sidebar">
+        <%= render "sidebar" %>
+      </div>
+      <div id="content">
+        <%= yield %>
+        <%= render "content" %>
+      </div>
+      <div id="footer">
+        <%= render "footer" %>
+      </div>
+    </div>
   </body>
 </html>

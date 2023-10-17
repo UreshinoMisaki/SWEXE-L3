@@ -1,5 +1,18 @@
-<p>
-<%= @tweet.message %>
-<%= ((Time.current - @tweet.tdate)/60).to_i %>分
-</p>
-<%= link_to '戻る', :back %>
+<div class="show_container">
+    <div class="acount">
+        <%= image_tag 'icon_1.png' %>
+        <h3 id="acount_name">
+            今晩はたこ焼き
+        </h3>
+        <p id="acount_id"> 
+            @aiue0
+        </p>
+        <p id="tweet_date">
+            <%= @tweet.tdate.strftime('%Y年%m月%d日') %>　<%# ツイートした日付を表示　%>
+        </p>
+    </div>
+    <p>
+    <%= @tweet.message %>
+    </p>
+    <%= link_to '戻る', :back %>
+</div>

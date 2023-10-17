@@ -2,14 +2,46 @@
     <%= flash[:notice] %>
 <% end %>
 
+<div class="index_header">
+    <div id="TWEET">
+        <h3>ツイート</h3>
+    </div>
+    <div id="REPLY">
+        <h3>ツイートと返信</h3>
+    </div>
+    <div id="MEDHIA">
+        <h3>メディア</h3>
+    </div>
+    <div id="LIKE">
+        <h3>いいね</h3>
+    </div>
+</div>
+
+
 <% @tweets.each do |e| %>
-    <p>
-        <%= e.message %>
-        <%= ((Time.current - e.tdate)/60).to_i %>分
-        <%=link_to '削除', "/tweets/#{e.id}", data: { turbo_method: :delete } %>
-        <%=link_to '表示', "/tweets/#{e.id}" %>
-        <%=link_to '編集', "/tweets/#{e.id}/edit" %>
-    </p>
+<div class="index_container">
+    <div class="index_tweet">
+        <div class="index_acount">
+        <%= image_tag 'icon_1.png' %>
+        <h3 id="index_acount_name">
+            今晩はたこ焼き
+        </h3>
+        <p id="index_acount_id"> 
+            @aiue0
+        </p>
+        <p id="index_tweet_date">
+            <%= e.tdate.strftime('%m月%d日') %>
+        </p>
+    </div>
+        <p id="message_padding">
+            <%= e.message %>
+            <%# ((Time.current - e.tdate)/60).to_i 分 %>
+            <%=link_to '削除', tweet_path(e), data: { turbo_method: :delete } %>
+            <%=link_to '表示', tweet_path(e) %> <!--/tweets/#{e.id}-->
+            <%=link_to '編集', edit_tweet_path(e) %> <!-- /tweets/#{e.id}/edit -->
+        </p>
+    </div>
+</div>
 <% end %>
 
-<%= link_to '新規追加', 'tweets/new' %>
+<%= link_to '新規追加', new_tweet_path %> <!--本来は / の文字列ではなく _path という引数を使う-->
